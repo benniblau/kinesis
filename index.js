@@ -175,6 +175,7 @@ function teleport(latlng) {
         markerShadowPos = latlng;
         sendLocation(`${markerShadowPos.lat},${markerShadowPos.lng}`)
         clearSteps();
+        map.panTo(latlng);
     }
     return choice;
 }
@@ -183,13 +184,7 @@ function teleportCoords() {
     LatCoord = document.getElementById('input_latitude').value;
     LongCoord = document.getElementById('input_longitude').value;
     LatLongCoords = L.latLng(LatCoord, LongCoord);
-
     teleport(LatLongCoords);
-
-    // marker.setLatLng(LatLongCoords);
-    // markerShadowPos = LatLongCoords;   
-    // Coords = `${LatCoord},${LongCoord}`;
-    // sendLocation(Coords);
 }
 
 
@@ -220,7 +215,6 @@ function move(target, distance) {
     sendLocation(`${randomLatlng.lat},${randomLatlng.lng}`)
     marker.setLatLng(randomLatlng);
 }
-
 
 function addStep(latlng) {
     console.log(`add ${latlng.lat},${latlng.lng}`);
