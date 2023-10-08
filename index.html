@@ -19,8 +19,15 @@
 </head>
 <body>
 <div id="map"></div>
+
 <div class="card" id="control-panel">
     <div class="card-body">
+
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="latitude" id="input_latitude">
+            <input class="form-control" type="text" placeholder="longitude" id="input_longitude">
+            <button type="button" class="btn btn-outline-primary" id="teleportButton">Teleport</button>
+        </div>
 
         <div class="btn-group btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
             <input type="checkbox" class="btn-check" id="pauseSwitch" autocomplete="off">
