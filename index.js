@@ -92,6 +92,7 @@ const setPause = (v) => {
 }
 setPause(pause);
 
+document.getElementById('teleportButton').addEventListener('click', teleportCoords);
 
 document.getElementById('undoButton').addEventListener('click', deleteStep);
 document.getElementById('stopButton').addEventListener('click', clearSteps);
@@ -176,6 +177,19 @@ function teleport(latlng) {
         clearSteps();
     }
     return choice;
+}
+
+function teleportCoords() {
+    LatCoord = document.getElementById('input_latitude').value;
+    LongCoord = document.getElementById('input_longitude').value;
+    LatLongCoords = L.latLng(LatCoord, LongCoord);
+
+    teleport(LatLongCoords);
+
+    // marker.setLatLng(LatLongCoords);
+    // markerShadowPos = LatLongCoords;   
+    // Coords = `${LatCoord},${LongCoord}`;
+    // sendLocation(Coords);
 }
 
 
