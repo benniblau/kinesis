@@ -1,3 +1,5 @@
+Fork from Kinesis. Added teleport feature based on manually entered coordinates.
+
 # Kinesis - Location Spoofing for iOS 17
 
 Built with `pymobiledevice3` and `leaflet`.
