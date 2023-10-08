@@ -1,4 +1,4 @@
-Fork from Kinesis. Added teleport feature based on manually entered coordinates.
+Fork from Kinesis. Added teleport feature based on manually entered coordinates. Python 3.11 required.
 
 # Kinesis - Location Spoofing for iOS 17
 
